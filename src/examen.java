@@ -7,6 +7,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JMenuBar;
 import javax.swing.JOptionPane;
@@ -79,7 +80,7 @@ public class examen {
 	
 	public void login(JFrame frame) {
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(0, 128, 192));
+		panel.setBackground(new Color(255, 255, 255));
 		panel.setBounds(0, 0, 1134, 554);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -110,10 +111,34 @@ public class examen {
 		textField_1.setColumns(10);
 		
 		JButton btnNewButton = new JButton("INGRESAR");
-		btnNewButton.setBackground(new Color(192, 192, 192));
+		btnNewButton.setBackground(new Color(0, 128, 192));
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 17));
-		btnNewButton.setBounds(698, 406, 190, 67);
+		btnNewButton.setBounds(400, 450, 190, 67);
 		panel.add(btnNewButton);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(0, 128, 192));
+		panel_1.setBounds(360, 120, 300, 300);
+		panel.add(panel_1);
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("rb1.png")));
+		img.setBounds(0, 40, 380, 500);
+		img.setBackground(Color.WHITE);
+		panel.add(img);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(0, 128, 192));
+		panel_2.setBounds(380, 40, 250, 50);
+		panel.add(panel_2);
+		
+		JLabel img1 = new JLabel("");
+		img1.setIcon(new ImageIcon(getClass().getResource("images.png")));
+		img1.setBounds(900, 0, 300, 200);
+		panel.add(img1);
+	
+		
+		
 		 btnNewButton.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
 	                String username = textField.getText();
@@ -145,14 +170,14 @@ public class examen {
 	
 	public void menu(JFrame frame) {
 		JPanel panel_1 = new JPanel();
-		panel_1.setBackground(new Color(128, 255, 255));
+		panel_1.setBackground(new Color(255, 255, 255));
 		panel_1.setBounds(0, 0, 1134, 554);
 		frame.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
 		JButton btnNewButton_1 = new JButton("Alumnos");
-		btnNewButton_1.setBackground(new Color(192, 192, 192));
-		btnNewButton_1.setBounds(464, 70, 251, 109);
+		btnNewButton_1.setBackground(new Color(128, 255, 255));
+		btnNewButton_1.setBounds(730, 400, 251, 109);
 		panel_1.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -167,8 +192,30 @@ public class examen {
 		
 		JButton btnNewButton_2 = new JButton("Docentes");
 		btnNewButton_2.setBackground(new Color(192, 192, 192));
-		btnNewButton_2.setBounds(464, 263, 251, 109);
+		btnNewButton_2.setBounds(150, 400, 251, 109);
 		panel_1.add(btnNewButton_2);
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("descarga.png")));
+		img.setBounds(138, 50, 300, 300);
+		panel_1.add(img);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBounds(10, 11, 549, 532);
+		panel_1.add(panel_2);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(new Color(255, 255, 128));
+		panel_3.setBounds(557, 11, 560, 532);
+		panel_1.add(panel_3);
+		panel_3.setLayout(null);
+		
+		JLabel img2 = new JLabel("");
+		img2.setIcon(new ImageIcon(getClass().getResource("alu.png")));
+		img2.setBounds(180, 40, 300, 300);
+		panel_3.add(img2);
+		
+		
 		btnNewButton_2.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
 			      
@@ -189,36 +236,9 @@ public class examen {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JButton btnNewButton_3 = new JButton("Descargar Informacion");
-		btnNewButton_3.setBackground(new Color(192, 192, 192));
-		btnNewButton_3.setBounds(205, 114, 170, 90);
-		panel.add(btnNewButton_3);
-		btnNewButton_3.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		     
-		      
-		            
-		            JOptionPane.showMessageDialog(frame, "se ha descargado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-		        }
-		});
-		
-		
-		JButton btnNewButton_4 = new JButton("Consultar");
-		btnNewButton_4.setBackground(new Color(192, 192, 192));
-		btnNewButton_4.setBounds(469, 114, 162, 90);
-		panel.add(btnNewButton_4);
-		btnNewButton_4.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		     
-		      
-		            
-		            JOptionPane.showMessageDialog(frame, "Los datos fueron consultados con Éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-		        }
-		});
-		
 		JButton btnNewButton_5 = new JButton("Crear");
 		btnNewButton_5.setBackground(new Color(192, 192, 192));
-		btnNewButton_5.setBounds(793, 114, 162, 90);
+		btnNewButton_5.setBounds(800, 200, 162, 50);
 		panel.add(btnNewButton_5);
 		btnNewButton_5.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -233,7 +253,7 @@ public class examen {
 		
 		JButton btnNewButton_6 = new JButton("Editar");
 		btnNewButton_6.setBackground(new Color(192, 192, 192));
-		btnNewButton_6.setBounds(213, 313, 162, 90);
+		btnNewButton_6.setBounds(100, 480, 162, 50);
 		panel.add(btnNewButton_6);
 		btnNewButton_6.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -248,7 +268,7 @@ public class examen {
 		
 		JButton btnNewButton_7 = new JButton("Eliminar");
 		btnNewButton_7.setBackground(new Color(192, 192, 192));
-		btnNewButton_7.setBounds(469, 313, 162, 90);
+		btnNewButton_7.setBounds(469, 480, 162, 50);
 		panel.add(btnNewButton_7);
 		btnNewButton_7.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -264,6 +284,87 @@ public class examen {
 		JButton btnNewButton_12 = new JButton("Cerrar sesion");
 		btnNewButton_12.setBounds(793, 313, 162, 90);
 		panel.add(btnNewButton_12);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(10, 11, 350, 250);
+		panel.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JButton btnNewButton_3 = new JButton("Descargar Informacion");
+		btnNewButton_3.setForeground(new Color(255, 255, 255));
+		btnNewButton_3.setBounds(65, 204, 193, 60);
+		panel_1.add(btnNewButton_3);
+		btnNewButton_3.setBackground(new Color(0, 128, 192));
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("des.png")));
+		img.setBounds(10, 11, 330, 174);
+		panel_1.add(img);
+		
+		JPanel panel_1_1 = new JPanel();
+		panel_1_1.setLayout(null);
+		panel_1_1.setBounds(370, 11, 350, 250);
+		panel.add(panel_1_1);
+		
+		JLabel img_1 = new JLabel("");
+		img_1.setIcon(new ImageIcon(getClass().getResource("ver.png")));
+		img_1.setBounds(80, 11, 168, 174);
+		panel_1_1.add(img_1);
+		
+		
+		JButton btnNewButton_4 = new JButton("Consultar");
+		btnNewButton_4.setForeground(new Color(255, 255, 255));
+		btnNewButton_4.setBounds(77, 180, 162, 59);
+		panel_1_1.add(btnNewButton_4);
+		btnNewButton_4.setBackground(new Color(0, 128, 192));
+		
+		JPanel panel_1_1_1 = new JPanel();
+		panel_1_1_1.setLayout(null);
+		panel_1_1_1.setBounds(730, 11, 350, 250);
+		panel.add(panel_1_1_1);
+		
+		JLabel img_1_1 = new JLabel("");
+		img_1_1.setIcon(new ImageIcon(getClass().getResource("alta.png")));
+		img_1_1.setBounds(80, 11, 168, 174);
+		panel_1_1_1.add(img_1_1);
+		
+		JPanel panel_1_1_1_1 = new JPanel();
+		panel_1_1_1_1.setLayout(null);
+		panel_1_1_1_1.setBounds(10, 293, 350, 250);
+		panel.add(panel_1_1_1_1);
+		
+		JLabel img_1_1_1 = new JLabel("");
+		img_1_1_1.setIcon(new ImageIcon(getClass().getResource("reg.png")));
+		img_1_1_1.setBounds(80, 11, 168, 174);
+		panel_1_1_1_1.add(img_1_1_1);
+		
+		JPanel panel_1_1_1_1_1 = new JPanel();
+		panel_1_1_1_1_1.setLayout(null);
+		panel_1_1_1_1_1.setBounds(370, 293, 350, 250);
+		panel.add(panel_1_1_1_1_1);
+		
+		JLabel img_1_1_1_1 = new JLabel("");
+		img_1_1_1_1.setIcon(new ImageIcon(getClass().getResource("baja.png")));
+		img_1_1_1_1.setBounds(80, 11, 168, 174);
+		panel_1_1_1_1_1.add(img_1_1_1_1);
+		btnNewButton_4.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		     
+		      
+		            
+		            JOptionPane.showMessageDialog(frame, "Los datos fueron consultados con Éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+		        }
+		});
+		
+		
+		btnNewButton_3.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		     
+		      
+		            
+		            JOptionPane.showMessageDialog(frame, "se ha descargado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+		        }
+		});
 		btnNewButton_12.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
 			      
@@ -767,36 +868,9 @@ public class examen {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
-		JButton btnNewButton_3 = new JButton("Descargar Informacion");
-		btnNewButton_3.setBackground(new Color(192, 192, 192));
-		btnNewButton_3.setBounds(205, 114, 170, 90);
-		panel.add(btnNewButton_3);
-		btnNewButton_3.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		     
-		      
-		            
-		            JOptionPane.showMessageDialog(frame, "se ha descargado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-		        }
-		});
-		
-		
-		JButton btnNewButton_4 = new JButton("Consultar");
-		btnNewButton_4.setBackground(new Color(192, 192, 192));
-		btnNewButton_4.setBounds(469, 114, 162, 90);
-		panel.add(btnNewButton_4);
-		btnNewButton_4.addActionListener(new ActionListener() {
-		    public void actionPerformed(ActionEvent e) {
-		     
-		      
-		            
-		            JOptionPane.showMessageDialog(frame, "Los datos fueron consultados con Éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-		        }
-		});
-		
 		JButton btnNewButton_5 = new JButton("Crear");
 		btnNewButton_5.setBackground(new Color(192, 192, 192));
-		btnNewButton_5.setBounds(793, 114, 162, 90);
+		btnNewButton_5.setBounds(800, 200, 162, 50);
 		panel.add(btnNewButton_5);
 		btnNewButton_5.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -811,7 +885,7 @@ public class examen {
 		
 		JButton btnNewButton_6 = new JButton("Editar");
 		btnNewButton_6.setBackground(new Color(192, 192, 192));
-		btnNewButton_6.setBounds(213, 313, 162, 90);
+		btnNewButton_6.setBounds(100, 480, 162, 50);
 		panel.add(btnNewButton_6);
 		btnNewButton_6.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -826,7 +900,7 @@ public class examen {
 		
 		JButton btnNewButton_7 = new JButton("Eliminar");
 		btnNewButton_7.setBackground(new Color(192, 192, 192));
-		btnNewButton_7.setBounds(469, 313, 162, 90);
+		btnNewButton_7.setBounds(469, 480, 162, 50);
 		panel.add(btnNewButton_7);
 		btnNewButton_7.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
@@ -842,6 +916,87 @@ public class examen {
 		JButton btnNewButton_12 = new JButton("Cerrar sesion");
 		btnNewButton_12.setBounds(793, 313, 162, 90);
 		panel.add(btnNewButton_12);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(10, 11, 350, 250);
+		panel.add(panel_1);
+		panel_1.setLayout(null);
+		
+		JButton btnNewButton_3 = new JButton("Descargar Informacion");
+		btnNewButton_3.setForeground(new Color(255, 255, 255));
+		btnNewButton_3.setBounds(65, 204, 193, 60);
+		panel_1.add(btnNewButton_3);
+		btnNewButton_3.setBackground(new Color(0, 128, 192));
+		
+		JLabel img = new JLabel("");
+		img.setIcon(new ImageIcon(getClass().getResource("des.png")));
+		img.setBounds(10, 11, 330, 174);
+		panel_1.add(img);
+		
+		JPanel panel_1_1 = new JPanel();
+		panel_1_1.setLayout(null);
+		panel_1_1.setBounds(370, 11, 350, 250);
+		panel.add(panel_1_1);
+		
+		JLabel img_1 = new JLabel("");
+		img_1.setIcon(new ImageIcon(getClass().getResource("ver.png")));
+		img_1.setBounds(80, 11, 168, 174);
+		panel_1_1.add(img_1);
+		
+		
+		JButton btnNewButton_4 = new JButton("Consultar");
+		btnNewButton_4.setForeground(new Color(255, 255, 255));
+		btnNewButton_4.setBounds(77, 180, 162, 59);
+		panel_1_1.add(btnNewButton_4);
+		btnNewButton_4.setBackground(new Color(0, 128, 192));
+		
+		JPanel panel_1_1_1 = new JPanel();
+		panel_1_1_1.setLayout(null);
+		panel_1_1_1.setBounds(730, 11, 350, 250);
+		panel.add(panel_1_1_1);
+		
+		JLabel img_1_1 = new JLabel("");
+		img_1_1.setIcon(new ImageIcon(getClass().getResource("alta.png")));
+		img_1_1.setBounds(80, 11, 168, 174);
+		panel_1_1_1.add(img_1_1);
+		
+		JPanel panel_1_1_1_1 = new JPanel();
+		panel_1_1_1_1.setLayout(null);
+		panel_1_1_1_1.setBounds(10, 293, 350, 250);
+		panel.add(panel_1_1_1_1);
+		
+		JLabel img_1_1_1 = new JLabel("");
+		img_1_1_1.setIcon(new ImageIcon(getClass().getResource("reg.png")));
+		img_1_1_1.setBounds(80, 11, 168, 174);
+		panel_1_1_1_1.add(img_1_1_1);
+		
+		JPanel panel_1_1_1_1_1 = new JPanel();
+		panel_1_1_1_1_1.setLayout(null);
+		panel_1_1_1_1_1.setBounds(370, 293, 350, 250);
+		panel.add(panel_1_1_1_1_1);
+		
+		JLabel img_1_1_1_1 = new JLabel("");
+		img_1_1_1_1.setIcon(new ImageIcon(getClass().getResource("baja.png")));
+		img_1_1_1_1.setBounds(80, 11, 168, 174);
+		panel_1_1_1_1_1.add(img_1_1_1_1);
+		btnNewButton_4.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		     
+		      
+		            
+		            JOptionPane.showMessageDialog(frame, "Los datos fueron consultados con Éxito", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+		        }
+		});
+		
+		
+		btnNewButton_3.addActionListener(new ActionListener() {
+		    public void actionPerformed(ActionEvent e) {
+		     
+		      
+		            
+		            JOptionPane.showMessageDialog(frame, "se ha descargado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+		        }
+		});
 		btnNewButton_12.addActionListener(new ActionListener() {
 			 public void actionPerformed(ActionEvent e) {
 			      
